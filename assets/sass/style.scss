@@ -35,45 +35,44 @@
 --------------------------------------------------------------*/
 
 // Compass Framework
-@import 'compass';
+@import "compass";
 
 // Setting
-@import 'setting/variable';
-@import 'setting/mixin';
+@import "setting/variable";
+@import "setting/mixin";
 
 // Base
-@import 'base/base';
+@import "base/base";
 
 // Google Font
-@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700');
-@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600');
-
+@import url("https://fonts.googleapis.com/css?family=Poppins:400,500,600,700");
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600");
 
 // Layout
-@import 'layout/preloader';
-@import 'layout/nav';
-@import 'layout/header';
-@import 'layout/banner';
-@import 'layout/search';
-@import 'layout/feature';
-@import 'layout/category';
-@import 'layout/jobs';
-@import 'layout/newsletter';
-@import 'layout/employee';
-@import 'layout/news';
-@import 'layout/download';
-@import 'layout/footer';
-@import 'layout/about';
-@import 'layout/job-single';
-@import 'layout/job-search';
-@import 'layout/pricing-plan';
-@import 'layout/job-category';
-@import 'layout/contact-us';
-@import 'layout/blog-home';
-@import 'layout/blog-details';
-@import 'layout/elements';
+@import "layout/preloader";
+@import "layout/nav";
+@import "layout/header";
+@import "layout/banner";
+@import "layout/search";
+@import "layout/feature";
+@import "layout/category";
+@import "layout/jobs";
+@import "layout/newsletter";
+@import "layout/employee";
+@import "layout/news";
+@import "layout/download";
+@import "layout/footer";
+@import "layout/about";
+@import "layout/job-single";
+@import "layout/job-search";
+@import "layout/pricing-plan";
+@import "layout/job-category";
+@import "layout/contact-us";
+@import "layout/blog-home";
+@import "layout/blog-details";
+@import "layout/elements";
 
 // Module
-@import 'module/btn';
-@import 'module/form';
-@import 'module/other';
+@import "module/btn";
+@import "module/form";
+@import "module/other";
