@@ -32,44 +32,42 @@
     </div>
     <!-- Preloader End -->
 
-    <!-- Header Area Starts -->
-    <header class="header-area main-header">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-2">
-            <div class="logo-area">
-              <a href="home.html"
-                ><img src="assets/images/logo.png" alt="logo"
-              /></a>
-            </div>
-          </div>
-          <div class="col-lg-10">
-            <div class="custom-navbar">
-              <span></span>
-              <span></span>
-              <span></span>
-            </div>
-            <div class="main-menu">
-              <ul>
-                <li class="active"><a href="home.html">home</a></li>
-                
-                <li><a href="jobs.html">Jobs</a></li>
-              
-                <li><a href="contact.html">contact</a></li>
-                <li>
-                  <a href="companies.html">Companies</a>
-                </li>
-                <li class="menu-btn">
-                  <a href="#" class="login">log in</a>
-                  <a href="#" class="template-btn">sign up</a>
-                </li>
-              </ul>
-            </div>
-          </div>
+<!-- Header Area Starts -->
+<header class="header-area main-header">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-2">
+        <div class="logo-area">
+          <a href="#"><img src="assets/images/logo.png" alt="logo" /></a>
         </div>
       </div>
-    </header>
-    <!-- Header Area End -->
+      <div class="col-lg-10">
+        <div class="custom-navbar">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <div class="main-menu">
+          <ul>
+            <li class="active"><a href="home.html">home</a></li>
+            <li><a href="jobs.html">Jobs</a></li>
+            <li><a href="contact.html">contact</a></li>
+            <li><a href="companies.html">Companies</a></li>
+            <li class="menu-btn">
+              <a href="signup.html" class="template-btn">sign up</a>
+              <a href="login.html" class="login">log in</a>
+              <!-- زر اللغة بنفس شكل زر الموقع -->
+              <a href="#" id="lang-toggle" class="login">عربي</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+<!-- Header Area End -->
+
+
 
     <!-- Banner Area Starts -->
     <section class="banner-area">
@@ -597,5 +595,79 @@
     <script src="assets/js/vendor/jquery.nice-select.min.js"></script>
     <script src="assets/js/vendor/ion.rangeSlider.js"></script>
     <script src="assets/js/main.js"></script>
+
+    <script>
+  // كل العناصر التي سيتم ترجمتها
+  const translations = [
+    // header
+    { selector: 'a[href="home.html"]', en: 'home', ar: 'الرئيسية' },
+    { selector: 'a[href="jobs.html"]', en: 'Jobs', ar: 'وظائف' },
+    { selector: 'a[href="contact.html"]', en: 'contact', ar: 'اتصل بنا' },
+    { selector: 'a[href="companies.html"]', en: 'Companies', ar: 'الشركات' },
+    { selector: '.template-btn[href="signup.html"]', en: 'sign up', ar: 'تسجيل' },
+    { selector: '.login[href="login.html"]', en: 'log in', ar: 'دخول' },
+    { selector: '#lang-toggle', en: 'عربي', ar: 'English' },
+
+    // Banner
+    { selector: '.banner-text h1', en: 'find your dream <span>job</span> with TAKWEEN', ar: 'اعثر على <span>وظيفتك</span> مع تكوين' },
+    { selector: '.banner-text p', en: 'Wherein herb beginning. Moved after gathering. Sea hi crate fowl man replenish place divided likeness herb one two lnetn Winged moving saw, may over.', ar: 'ابدأ رحلتك المهنية معنا. اكتشف أفضل الوظائف المتاحة بسهولة.' },
+    { selector: '.banner-text .secondary-btn', en: 'explore now', ar: 'اكتشف الآن' },
+
+    // Feature Area
+    { selector: '.feature-area h4:nth-of-type(1)', en: 'UX/UI Designer', ar: 'مصمم UX/UI' },
+    { selector: '.feature-area h4:nth-of-type(2)', en: 'web Designer', ar: 'مصمم ويب' },
+    { selector: '.feature-area h4:nth-of-type(3)', en: 'Accounting and Finance', ar: 'المحاسبة والمالية' },
+    { selector: '.feature-area .secondary-btn', en: 'explore now', ar: 'اكتشف الآن' },
+
+    // Category Area
+    { selector: '.category-area h2', en: 'Top Companies', ar: 'أفضل الشركات' },
+    { selector: '.more-job-btn .template-btn', en: 'View all companies', ar: 'عرض كل الشركات' },
+
+    // Jobs Area
+    { selector: '.jobs-title h2', en: 'Browse recent jobs', ar: 'تصفح الوظائف الأخيرة' },
+    { selector: '.more-job-btn .template-btn', en: 'more job post', ar: 'المزيد من الوظائف' },
+
+    // Download Area
+    { selector: '.download-text h2', en: 'Download the app your mobile today', ar: 'حمّل التطبيق على جوالك اليوم' },
+    { selector: '.download-text p', en: 'Light earth also land can\'t. May you midst shall lights blessed in lights Have gathered image morning blessed grass him. Appear female rule all seas she\'d winged', ar: 'قم بتنزيل تطبيقنا لتسهيل البحث عن الوظائف وإدارة ملفك الشخصي بسهولة.' },
+    { selector: '.download-btn p span', en: 'Available', ar: 'متاح' },
+    { selector: '.download-btn a p', en: 'on App Store', ar: ' حمل التطبيق من App Store' },
+    { selector: '.download-btn.dark a p', en: 'on Play Store', ar: 'على Play Store' },
+
+    // Footer
+    { selector: '.footer-widget h3', en: 'top products', ar: 'أفضل المنتجات' },
+    { selector: '.footer-widget p', en: 'You can trust us. we only send promo offers, not a single.', ar: 'يمكنك الوثوق بنا، نرسل العروض الترويجية فقط.' },
+    { selector: '.footer-widget button', en: 'subscribe now', ar: 'اشترك الآن' },
+  ];
+
+  const langToggle = document.getElementById('lang-toggle');
+  let isArabic = false;
+
+  langToggle.addEventListener('click', function(e) {
+    e.preventDefault();
+    isArabic = !isArabic;
+
+    // تبديل اتجاه الصفحة
+    document.documentElement.dir = isArabic ? 'rtl' : 'ltr';
+    document.documentElement.lang = isArabic ? 'ar' : 'en';
+
+    // تحديث كل النصوص
+    translations.forEach(item => {
+      const el = document.querySelector(item.selector);
+      if (el) {
+        el.innerHTML = isArabic ? item.ar : item.en;
+      }
+    });
+
+    // تغيير نص الزر نفسه
+    this.innerHTML = isArabic ? 'English' : 'عربي';
+  });
+</script>
+
+    
   </body>
 </html>
+
+
+
+
